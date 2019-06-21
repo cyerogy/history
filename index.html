@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="pull-left">
+        <a href="javascript:void(0)" onclick="push()">push</a>
+        <br/>
+        <a href="javascript:void(0)" onclick="replace()">replace</a>
+        <br />
+        <a href="javascript:void(0)" onclick="back()">back</a>
+        <br />
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="./historyconfig.js"></script>
+<script src="./history.js"></script>
+<script>
+    function push(){
+        ctvistarouter.push("/admin/1/1")
+    }
+    function replace(){
+        ctvistarouter.replace("/admin/info/1/2")
+    }
+    function back() {
+        ctvistarouter.back(-1)
+    }
+    function gotoConfig(){
+        console.log(arguments)
+    }
+    ctvistarouter.init()
+</script>
+</html>
