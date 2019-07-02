@@ -16,15 +16,20 @@
         <br />
     </div>
 </body>
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="./historyconfig.js"></script>
-<script src="./history.js"></script>
+<script src="./jquery.js"></script>
+<script src="./jquery.history.js"></script>
+<script src="./ctvistarhistoryconfig.js"></script>
+<script src="./ctvistarhistory.js"></script>
 <script>
     function push(){
-        ctvistarouter.push("/admin/1/1")
+        ctvistarouter.push("/admin/1/1",{
+            state:"push"
+        })
     }
     function replace(){
-        ctvistarouter.replace("/admin/info/1/2")
+        ctvistarouter.replace("/admin/admin/1/2",{
+            state: "repalce"
+        })
     }
     function back() {
         ctvistarouter.back(-1)
